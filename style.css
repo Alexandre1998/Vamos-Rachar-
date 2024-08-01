@@ -1,0 +1,204 @@
+/* CSS atual */
+body {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    background-color: #f0f8ff; /* Azul claro */
+    color: #333333; /* Cinza escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    transition: background-color 0.5s, color 0.5s; /* Transição suave */
+}
+
+.container {
+    background-color: #ffffff; /* Branco */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0; /* Começa invisível */
+    transform: scale(0.8); /* Começa menor */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animação de fade-in e zoom-in */
+    z-index: 1; /* Garante que a caixa de resultado fique acima do menu */
+}
+
+.container.show {
+    opacity: 1; /* Torna visível */
+    transform: scale(1); /* Escala normal */
+}
+
+h1 {
+    color: #4682b4; /* Azul aço */
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333333; /* Cinza escuro */
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #4682b4; /* Azul aço */
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4682b4; /* Azul aço */
+    color: #ffffff; /* Branco */
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Animação de botão */
+}
+
+button:hover {
+    background-color: #4169e1; /* Azul royal */
+    transform: scale(1.1); /* Aumenta um pouco o botão */
+}
+
+button:active {
+    transform: scale(0.9); /* Diminui um pouco o botão quando clicado */
+}
+
+button i {
+    margin-right: 8px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #4682b4; /* Azul aço */
+    font-weight: bold;
+    animation: resultAnimation 1s ease-in; /* Animação de fade-in */
+}
+
+/* Animação de Fade-In */
+@keyframes resultAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botão de alternância de menu */
+.menu-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4682b4; /* Azul aço */
+    border: none;
+    border-radius: 50%;
+    color: #ffffff; /* Branco */
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animação de botão de menu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Garante que o botão de menu fique acima do conteúdo */
+}
+
+/* Estilo do ícone no botão */
+.menu-toggle i {
+    margin: 0;
+}
+
+/* Hover e Click */
+.menu-toggle:hover {
+    background-color: #4169e1; /* Azul royal */
+    transform: rotate(360deg); /* Gira o botão */
+}
+
+.menu-toggle:active {
+    transform: scale(0.9); /* Diminui um pouco o botão quando clicado */
+}
+
+/* Menu de Personalização */
+.customization-menu {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #ffffff; /* Branco */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Animação do menu */
+    display: none; /* Inicialmente oculto */
+    z-index: 1000; /* Garante que o menu fique sobre outros elementos */
+    width: 300px; /* Largura do menu */
+    padding: 20px;
+}
+
+.customization-menu.show {
+    display: block; /* Torna o menu visível */
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu-header h2 {
+    font-size: 1.5em;
+}
+
+.close-menu {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-menu:hover {
+    color: #4682b4; /* Azul aço */
+}
+
+/* Estilo dos campos de personalização */
+#customTheme, #animations {
+    margin-bottom: 20px;
+}
+
+#customTheme h3, #animations h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+#customTheme label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#customTheme input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#animations button {
+    width: 100%;
+}

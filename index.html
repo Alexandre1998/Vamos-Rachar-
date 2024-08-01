@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão de Conta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMy84zC1ZkUTWxkSToH5gWoK5EY5Z8MY5apgF0g" crossorigin="anonymous">
+</head>
+<body>
+    <button id="toggleMenu" class="menu-toggle"><i class="fas fa-cogs"></i></button>
+    
+    <div class="container">
+        <h1><i class="fas fa-pizza-slice"></i> Divisão de Conta do Restaurante</h1>
+        <form id="splitForm">
+            <label for="totalAmount"><i class="fas fa-dollar-sign"></i> Valor Total da Conta (R$):</label>
+            <input type="number" id="totalAmount" step="0.01" required>
+            
+            <label for="numPeople"><i class="fas fa-users"></i> Número de Pessoas:</label>
+            <input type="number" id="numPeople" required>
+            
+            <label for="tipPercentage"><i class="fas fa-grin-beam"></i> Percentual de Gorjeta (%):</label>
+            <input type="number" id="tipPercentage" step="0.01" value="0">
+            
+            <button type="submit"><i class="fas fa-calculator"></i> Calcular</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    
+    <!-- Menu de Personalização -->
+    <div id="customizationMenu" class="customization-menu">
+        <div class="menu-header">
+            <h2><i class="fas fa-paint-brush"></i> Personalização</h2>
+            <button id="closeMenu" class="close-menu"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="menu-content">
+            <div id="customTheme">
+                <h3>Escolha suas Cores</h3>
+                <label for="backgroundColor">Cor de Fundo:</label>
+                <input type="color" id="backgroundColor" value="#f0f8ff">
+                
+                <label for="textColor">Cor do Texto:</label>
+                <input type="color" id="textColor" value="#333333">
+                
+                <button id="applyTheme">Aplicar Tema</button>
+            </div>
+            
+            <div id="animations">
+                <h3>Animações Adicionais</h3>
+                <button id="toggleAnimations">Ativar Animações</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

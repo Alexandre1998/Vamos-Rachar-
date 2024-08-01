@@ -33,5 +33,5 @@ Cálculo:
 
 Clique no botão "Calcular".
 O sistema exibirá o valor total incluindo a gorjeta e o valor que cada pessoa deve pagar.
-![2](https://github.com/user-attachments/assets/4cbf9b62-8708-4b0d-857f-0cbe7e61c8df)
 ![1](https://github.com/user-attachments/assets/f038bed0-9f56-41f6-b3a8-8f9c3039a22b)
+![2](https://github.com/user-attachments/assets/4cbf9b62-8708-4b0d-857f-0cbe7e61c8df)
